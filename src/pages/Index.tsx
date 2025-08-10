@@ -1,12 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/site/Navbar";
+import Hero from "@/components/site/Hero";
+import Services from "@/components/site/Services";
+import Why from "@/components/site/Why";
+import Process from "@/components/site/Process";
+import Footer from "@/components/site/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <Why />
+        <Process />
+      </main>
+      <Footer />
+
+      <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Digitizee Agency (Clone)",
+        "url": window.location.origin,
+        "sameAs": [
+          "https://digitizeeagency.com/"
+        ]
+      }) }} />
     </div>
   );
 };
